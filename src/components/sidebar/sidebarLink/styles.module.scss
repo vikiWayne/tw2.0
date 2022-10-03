@@ -1,0 +1,43 @@
+.activeLink {
+    .linkContainer {
+        background-color: #f3f3f3;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            height: 100%;
+            width: 3px;
+            background-color: #00cccc;
+            left: 0;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .linkIcon {
+            color: #00cccc;
+        }
+        .linkText {
+            color: #00cccc;
+        }
+    }
+}
+
+.linkContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0rem 0.5rem 1rem;
+    .linkIcon {
+        color: gray;
+    }
+
+    .linkText {
+        font-size: 1rem;
+        padding: 0;
+        line-height: 0;
+        font-weight: 700;
+        margin-top: 2px;
+        color: #5f6969;
+        text-transform: capitalize;
+    }
+}

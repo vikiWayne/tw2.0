@@ -1,0 +1,144 @@
+.pageLayout {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+.subscriptionItems {
+    display: flex;
+    gap: 3rem;
+    width: 100%;
+}
+
+.cardContent {
+    display: flex;
+    flex-direction: column;
+    .divider {
+        margin: 1rem 0;
+    }
+    .topContent {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-left: 2px;
+        .title {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .subTitle {
+            color: #9f9c9c;
+            font-size: 1.4rem;
+        }
+        .caption {
+            color: #918f8f;
+            font-size: 1rem;
+        }
+    }
+    .midContent {
+        padding: 1.5rem 0;
+        .text {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #918f8f;
+        }
+        .radioContainer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            .btnContainer {
+                flex: 1;
+                button {
+                    color: #ffffff;
+                    text-transform: none;
+                }
+            }
+        }
+    }
+    .bottomContent {
+        padding-top: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        .listItem {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            .listIcon {
+                font-size: 1.8rem;
+            }
+            .itemText {
+                font-size: 1.2rem;
+                color: #918f8f;
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+
+.available {
+    color: #00cccc;
+}
+.unavailable {
+    color: #dd581f;
+}
+
+.activeText {
+    color: #00cccc;
+}
+
+.inActiveText {
+    color: #000000;
+}
+
+.radioLabel {
+    font-weight: bold;
+}
+
+// Swiper
+// .carousel {
+//     position: relative;
+// }
+
+// .bullet {
+//     height: 5px !important;
+//     width: 5px !important;
+//     background-color: #19ce99 !important;
+//     border-radius: 50%;
+// }
+
+.carouselContainer {
+    height: 240px;
+    border-right: 1px solid #c3c3c3;
+    position: static !important;
+}
+
+.swiper {
+    padding-top: 3rem !important;
+}
+
+// Slider item
+.sliderContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .sliderItemTitle {
+        font-weight: bold;
+        font-size: 1.4rem;
+    }
+    .sliderSubText {
+        color: #9f9c9c;
+        font-size: 1.2rem;
+    }
+    .divider {
+        margin: 1rem 0;
+    }
+    .sliderItemBottom {
+        padding: 0.5rem 0;
+        .bottomText {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+    }
+}

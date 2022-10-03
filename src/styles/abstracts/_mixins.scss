@@ -1,0 +1,23 @@
+$bp-mobile: 599px;
+$bp-tablet: 900px;
+$bp-desktop: 1200px;
+
+// Mixins for media query
+
+@mixin mobile-screen {
+    @media (max-width: $bp-mobile) {
+        @content;
+    }
+}
+
+@mixin tablet-screen {
+    @media (min-width: $bp-tablet) {
+        @content;
+    }
+}
+
+@mixin desktop-screen {
+    @media (min-width: $bp-desktop) {
+        @content;
+    }
+}

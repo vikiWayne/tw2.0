@@ -1,0 +1,37 @@
+@use "./functions" as *;
+
+$themes: (
+    light: (
+        color-primary: #00cccc,
+        color-secondary: #17212a,
+        bg-color: #ffffff,
+        text-primary: #ffffff,
+    ),
+    dark: (
+        color-primary: #869731,
+        color-secondary: #87481a,
+        bg-color: #121212,
+        text-primary: #d4cfcf,
+    ),
+);
+
+// Create css variable
+@each $name, $map in $themes {
+    .theme-#{$name} {
+        @each $key, $value in $map {
+            --#{$key}: #{$value};
+        }
+    }
+}
+
+// export colors for JS
+:export {
+    colorPrimaryLight: getLightThemeColor($themes, color-primary);
+    colorPrimaryDark: getDarkThemeColor($themes, color-primary);
+
+    colorSecondaryLight: getLightThemeColor($themes, color-secondary);
+    colorSecondaryDark: getDarkThemeColor($themes, color-secondary);
+
+    bgColorLight: getLightThemeColor($themes, bg-color);
+    bgColorDark: getDarkThemeColor($themes, bg-color);
+}

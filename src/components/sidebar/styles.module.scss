@@ -1,0 +1,14 @@
+@use "../../styles/abstracts/mixins" as *;
+
+.sidebar_container {
+    height: 100%;
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid #dedede;
+    padding: 3rem 0;
+
+    @include mobile-screen {
+        display: none;
+    }
+}

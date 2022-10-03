@@ -1,0 +1,22 @@
+.planWrapper {
+    padding: 2em;
+
+    .label {
+        position: absolute;
+        top: -22px;
+        padding: 0.4em 2em;
+        border-radius: 4px 4px 0 0;
+        .labelText {
+            color: #ffffff;
+            text-transform: capitalize;
+            line-height: 1rem;
+            margin-top: 2px;
+        }
+    }
+}
+
+.card {
+    border-radius: 10px !important;
+    position: relative;
+    overflow: visible !important;
+}

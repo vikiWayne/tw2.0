@@ -1,0 +1,11 @@
+@function getColorFromTheme($themes, $mode, $colorKey) {
+    @return map-get(map-get($themes, $mode), $colorKey);
+}
+
+@function getDarkThemeColor($themes, $colorKey) {
+    @return getColorFromTheme($themes, dark, $colorKey);
+}
+
+@function getLightThemeColor($themes, $colorKey) {
+    @return getColorFromTheme($themes, light, $colorKey);
+}
