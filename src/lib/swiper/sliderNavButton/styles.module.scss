@@ -1,14 +1,12 @@
 .navigator {
-    z-index: 2;
+    z-index: 1;
     position: absolute !important;
     height: 30px;
     width: 30px;
-    border-radius: 50%;
     background-color: var(--color-secondary) !important;
     top: 50%;
     transform: translateY(-50%);
-    display: grid;
-    place-content: center;
+
     &:hover {
         background-color: var(--color-secondary);
     }

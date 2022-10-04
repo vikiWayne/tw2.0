@@ -8,10 +8,11 @@ type PlanTypes = {
   activeColor?: string;
   children: ReactNode;
   width?: string;
+  hideLabel?: boolean;
 };
 
 function Plan(props: PlanTypes) {
-  const { label, active, activeColor, children, width } = props;
+  const { label, active, activeColor, children, width, hideLabel } = props;
   return (
     <Card
       className={styles.planWrapper}
@@ -19,7 +20,7 @@ function Plan(props: PlanTypes) {
       elevation={2}
       classes={{ root: styles.card }}
     >
-      {label && active && (
+      {active && !hideLabel && label && (
         <Box
           className={styles.label}
           sx={{ backgroundColor: active ? activeColor : "transparent" }}

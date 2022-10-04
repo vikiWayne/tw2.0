@@ -1,0 +1,53 @@
+.pageLayout {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.spaceBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.paymentButton {
+    width: 25%;
+    margin-right: 8% !important;
+}
+
+.scrollContainer {
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+    max-height: 40vh;
+    overflow-y: auto;
+    padding: 2rem 0 2rem 2rem;
+}
+
+.accessCode {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .divider {
+        margin: 1.5rem 0 1rem 0;
+    }
+    .code {
+        .codeText {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 1.8rem;
+        }
+    }
+    .expiryDetails {
+        .expiryInfo {
+            font-size: 1.2rem;
+            color: #918f8f;
+            font-weight: bold;
+        }
+
+        .status {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

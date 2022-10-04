@@ -85,6 +85,19 @@ export function ThemeProvider(props: ProviderType) {
           fontSize: 14,
           htmlFontSize: 16,
         },
+        components: {
+          MuiButton: {
+            styleOverrides: {
+              root: {
+                textTransform: "none",
+                fontSize: "1rem",
+              },
+              containedPrimary: {
+                color: "#ffffff",
+              },
+            },
+          },
+        },
       }),
     [mode, darkThemePalette, lightThemePalette]
   );

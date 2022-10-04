@@ -1,0 +1,90 @@
+.cardWrapper {
+    border-radius: 10px;
+    background: #ffffff;
+    padding: 1.5rem 2.5rem;
+    box-shadow: 0px 0px 20px 0px #e0e0e0;
+    flex-direction: column;
+    position: relative;
+    min-width: 200px;
+
+    &::before,
+    &::after {
+        content: "";
+        height: 10px;
+        width: 5px;
+        position: absolute;
+        background-color: #fff;
+        box-shadow: inset 0px 0px 10px 0px #e0e0e0;
+        top: 55%;
+        transform: translateY(-50%);
+    }
+    &::before {
+        left: 0px;
+        border-radius: 0 15px 15px 0;
+    }
+    &::after {
+        right: 0px;
+        border-radius: 15px 0 0 15px;
+    }
+
+    .cardDetails {
+        display: flex;
+        gap: 1rem;
+        padding-bottom: 3rem;
+        align-items: center;
+        .cardLogo {
+            width: 30px;
+            height: 30px;
+        }
+        .cardInfo {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            flex: 1;
+
+            .cardName {
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+            .cardStatus {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .cardStatusText {
+                    text-transform: capitalize;
+                    color: #918f8f;
+                }
+            }
+        }
+    }
+
+    .cardControls {
+        padding-top: 1.5rem;
+
+        .usageText {
+            color: #918f8f;
+            text-transform: capitalize;
+        }
+
+        .action {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.5rem;
+            .remove {
+                text-transform: uppercase;
+                font-weight: bold;
+                color: #f7245b;
+                cursor: pointer;
+            }
+
+            .viewUsage {
+                text-transform: uppercase;
+                font-weight: bold;
+                color: var(--color-primary);
+                cursor: pointer;
+            }
+        }
+    }
+}
