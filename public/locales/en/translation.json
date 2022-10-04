@@ -1,3 +1,18 @@
 {
-  "title": "welcome to english"
+  "pages": {
+    "purchaseCenter": {
+      "plans": {
+        "free": {
+          "title": "Free",
+          "subtitle": "Build your profile and grow your network",
+          "subText": "As a free member, you get to set-up your profile and get viewed by employers."
+        },
+        "preferred": {
+          "title": "Preferred",
+          "subtitle": "Match with employers and build your future",
+          "subText": "As a preferred member, you get perfect job matches daily"
+        }
+      }
+    }
+  }
 }
