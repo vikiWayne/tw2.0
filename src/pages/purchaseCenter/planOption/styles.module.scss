@@ -1,0 +1,20 @@
+.available {
+    color: #00cccc;
+}
+.unavailable {
+    color: #dd581f;
+}
+
+.listItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    .listIcon {
+        font-size: 1.8rem;
+    }
+    .itemText {
+        font-size: 1.2rem;
+        color: #918f8f;
+        text-transform: capitalize;
+    }
+}

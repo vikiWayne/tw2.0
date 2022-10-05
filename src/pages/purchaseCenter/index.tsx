@@ -1,8 +1,4 @@
 import {
-  CheckCircleOutlineRounded,
-  HighlightOffRounded,
-} from "@mui/icons-material";
-import {
   Box,
   Button,
   Divider,
@@ -15,6 +11,8 @@ import {
 import { Breadcrumb, PageWrapper, Plan } from "components/ui";
 import SwiperCarousal from "lib/swiper";
 import { SwiperSlide } from "swiper/react";
+import PlanDetails from "./planDetails";
+import PlanOption from "./planOption";
 
 import styles from "./styles.module.scss";
 
@@ -63,28 +61,13 @@ function PurchaseCenter() {
           >
             <Box className={styles.cardContent}>
               <Box className={styles.topContent}>
-                <Typography
-                  variant="body2"
-                  component="h3"
-                  className={`${styles.title} ${styles.activeText}`}
-                >
-                  Free
-                </Typography>
-                <Typography
-                  variant="body2"
-                  component="h4"
-                  className={styles.subTitle}
-                >
-                  Build your profile and grow your network
-                </Typography>
-                <Typography
-                  variant="caption"
-                  component="h3"
-                  className={styles.caption}
-                >
-                  As a free member, you get to set-up your profile and get
-                  viewed by employers.
-                </Typography>
+                <PlanDetails
+                  title="Free"
+                  subTitle="Build your profile and grow your network"
+                  description="As a free member, you get to set-up your profile and get
+                  viewed by employers."
+                  isActive
+                />
               </Box>
               <Divider className={styles.divider} />
               <Box className={styles.midContent}>
@@ -99,20 +82,11 @@ function PurchaseCenter() {
               <Divider className={styles.divider} />
               <Box className={styles.bottomContent}>
                 {PLAN_OPTIONS.map((option) => (
-                  <Box className={styles.listItem} key={option.label}>
-                    {option.isFree ? (
-                      <CheckCircleOutlineRounded
-                        className={`${styles.listIcon} ${styles.available}`}
-                      />
-                    ) : (
-                      <HighlightOffRounded
-                        className={`${styles.listIcon} ${styles.unavailable}`}
-                      />
-                    )}
-                    <Typography variant="body2" className={styles.itemText}>
-                      {option.label}
-                    </Typography>
-                  </Box>
+                  <PlanOption
+                    label={option.label}
+                    key={option.label}
+                    isAvailable={option.isFree}
+                  />
                 ))}
               </Box>
             </Box>
@@ -121,27 +95,11 @@ function PurchaseCenter() {
           <Plan label="My Current Plan" width="40%" activeColor="#00cccc">
             <Box className={styles.cardContent}>
               <Box className={styles.topContent}>
-                <Typography
-                  variant="body2"
-                  component="h3"
-                  className={`${styles.title} ${styles.inActiveText}`}
-                >
-                  Preferred
-                </Typography>
-                <Typography
-                  variant="body2"
-                  component="h4"
-                  className={styles.subTitle}
-                >
-                  Match with employers and build your future
-                </Typography>
-                <Typography
-                  variant="caption"
-                  component="h3"
-                  className={styles.caption}
-                >
-                  As a preferred member, you get perfect job matches daily
-                </Typography>
+                <PlanDetails
+                  title="Preferred"
+                  subTitle="Match with employers and build your future"
+                  description="As a preferred member, you get perfect job matches daily"
+                />
               </Box>
               <Divider className={styles.divider} />
               <Box className={styles.midContent}>
@@ -176,20 +134,11 @@ function PurchaseCenter() {
               <Divider className={styles.divider} />
               <Box className={styles.bottomContent}>
                 {PLAN_OPTIONS.map((option) => (
-                  <Box className={styles.listItem} key={option.label}>
-                    {option.isPreferred ? (
-                      <CheckCircleOutlineRounded
-                        className={`${styles.listIcon} ${styles.available}`}
-                      />
-                    ) : (
-                      <HighlightOffRounded
-                        className={`${styles.listIcon} ${styles.unavailable}`}
-                      />
-                    )}
-                    <Typography variant="body2" className={styles.itemText}>
-                      {option.label}
-                    </Typography>
-                  </Box>
+                  <PlanOption
+                    label={option.label}
+                    key={option.label}
+                    isAvailable={option.isPreferred}
+                  />
                 ))}
               </Box>
             </Box>
