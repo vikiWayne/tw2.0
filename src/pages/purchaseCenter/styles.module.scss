@@ -26,7 +26,7 @@
         .text {
             font-size: 1.2rem;
             font-weight: bold;
-            color: #918f8f;
+            color: var(--text-primary);
         }
         .radioContainer {
             display: flex;
@@ -46,21 +46,13 @@
     }
 }
 
-// .activeText {
-//     color: #00cccc;
-// }
-
-// .inActiveText {
-//     color: #000000;
-// }
-
 .radioLabel {
     font-weight: bold;
 }
 
 .carouselContainer {
     height: 240px;
-    border-right: 1px solid #c3c3c3;
+    border-right: 1px solid var(--sidebar-border);
     position: static !important;
 }
 
@@ -79,7 +71,7 @@
         font-size: 1.4rem;
     }
     .sliderSubText {
-        color: #9f9c9c;
+        color: var(--text-primary);
         font-size: 1.2rem;
     }
     .divider {

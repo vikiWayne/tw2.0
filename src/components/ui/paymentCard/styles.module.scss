@@ -1,8 +1,8 @@
 .cardWrapper {
     border-radius: 10px;
-    background: #ffffff;
+    background: var(--bg-color);
     padding: 1.5rem 2.5rem;
-    box-shadow: 0px 0px 20px 0px #e0e0e0;
+    box-shadow: 0px 0px 20px 0px var(--payment-card-shadow);
     flex-direction: column;
     position: relative;
     min-width: 200px;
@@ -13,8 +13,8 @@
         height: 10px;
         width: 5px;
         position: absolute;
-        background-color: #fff;
-        box-shadow: inset 0px 0px 10px 0px #e0e0e0;
+        background-color: var(--bg-color);
+        box-shadow: inset 0px 0px 10px 0px var(--payment-card-shadow);
         top: 55%;
         transform: translateY(-50%);
     }
@@ -45,6 +45,7 @@
             .cardName {
                 font-weight: bold;
                 text-transform: uppercase;
+                color: var(--dark);
             }
 
             .cardStatus {
@@ -54,7 +55,7 @@
 
                 .cardStatusText {
                     text-transform: capitalize;
-                    color: #918f8f;
+                    color: var(--text-primary);
                 }
             }
         }
@@ -64,7 +65,7 @@
         padding-top: 1.5rem;
 
         .usageText {
-            color: #918f8f;
+            color: var(--text-primary);
             text-transform: capitalize;
         }
 
@@ -75,7 +76,7 @@
             .remove {
                 text-transform: uppercase;
                 font-weight: bold;
-                color: #f7245b;
+                color: var(--danger);
                 cursor: pointer;
             }
 

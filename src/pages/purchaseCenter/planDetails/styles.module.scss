@@ -1,21 +1,14 @@
 .activeText {
-    color: #00cccc;
+    color: var(--color-primary);
 }
 
 .inActiveText {
-    color: #000000;
-}
-
-.title {
-    font-size: 1.8rem;
-    font-weight: bold;
+    color: var(--dark);
 }
 
 .subTitle {
-    color: #9f9c9c;
-    font-size: 1.4rem;
+    color: var(--text-primary);
 }
 .caption {
-    color: #918f8f;
-    font-size: 1rem;
+    color: var(--text-primary);
 }

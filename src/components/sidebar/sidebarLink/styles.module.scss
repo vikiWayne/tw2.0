@@ -1,6 +1,6 @@
 .activeLink {
     .linkContainer {
-        background-color: #f3f3f3;
+        background-color: var(--sidebar-list-bg);
         position: relative;
         &::before {
             content: "";
@@ -8,16 +8,16 @@
             display: block;
             height: 100%;
             width: 3px;
-            background-color: #00cccc;
+            background-color: var(--color-primary);
             left: 0;
             border-radius: 0 5px 5px 0;
         }
 
         .linkIcon {
-            color: #00cccc;
+            color: var(--color-primary);
         }
         .linkText {
-            color: #00cccc;
+            color: var(--color-primary);
         }
     }
 }
@@ -28,7 +28,7 @@
     gap: 0.5rem;
     padding: 0.5rem 0rem 0.5rem 1rem;
     .linkIcon {
-        color: gray;
+        color: var(--text-primary);
     }
 
     .linkText {
@@ -37,7 +37,7 @@
         line-height: 0;
         font-weight: 700;
         margin-top: 2px;
-        color: #5f6969;
+        color: var(--text-primary);
         text-transform: capitalize;
     }
 }

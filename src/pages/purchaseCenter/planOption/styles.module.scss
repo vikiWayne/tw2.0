@@ -1,8 +1,8 @@
 .available {
-    color: #00cccc;
+    color: var(--color-primary);
 }
 .unavailable {
-    color: #dd581f;
+    color: var(--danger);
 }
 
 .listItem {
@@ -14,7 +14,7 @@
     }
     .itemText {
         font-size: 1.2rem;
-        color: #918f8f;
+        color: var(--text-primary);
         text-transform: capitalize;
     }
 }

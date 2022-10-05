@@ -3,11 +3,11 @@
     align-items: center;
     gap: 1rem;
     .text {
-        color: #918f8f;
+        color: var(--text-primary);
         user-select: none;
     }
     .activeText {
         font-weight: 700;
-        color: #000000;
+        color: var(--dark);
     }
 }

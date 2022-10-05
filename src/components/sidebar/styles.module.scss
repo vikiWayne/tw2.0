@@ -5,7 +5,7 @@
     width: 230px;
     display: flex;
     flex-direction: column;
-    border-right: 2px solid #dedede;
+    border-right: 2px solid var(--sidebar-border);
     padding: 3rem 0;
 
     @include mobile-screen {

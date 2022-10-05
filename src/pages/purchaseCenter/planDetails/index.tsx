@@ -15,16 +15,26 @@ function PlanDetails(props: PlanDetailsProps) {
       <Typography
         variant="body2"
         component="h3"
-        className={`${styles.title} ${
-          isActive ? styles.activeText : styles.inActiveText
-        }`}
+        fontSize="1.8rem"
+        fontWeight="bold"
+        className={`${isActive ? styles.activeText : styles.inActiveText}`}
       >
         {title}
       </Typography>
-      <Typography variant="body2" component="h4" className={styles.subTitle}>
+      <Typography
+        fontSize="1.4rem"
+        variant="body2"
+        component="h4"
+        className={styles.subTitle}
+      >
         {subTitle}
       </Typography>
-      <Typography variant="caption" component="h3" className={styles.caption}>
+      <Typography
+        fontSize="1rem"
+        variant="caption"
+        component="h3"
+        className={styles.caption}
+      >
         {description}
       </Typography>
     </>
