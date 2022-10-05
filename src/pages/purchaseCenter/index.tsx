@@ -33,20 +33,20 @@ const breadcrumbs = {
   ],
 };
 
-const FREE_OPTIONS = [
-  { label: "Get Daily Matches", isAvailable: true },
-  { label: "Show Employers Your Interest", isAvailable: true },
-  { label: "Preferred Search Results Positioning", isAvailable: false },
-  { label: "manage your interest with AML", isAvailable: false },
-  { label: "priority matching to job opportunities", isAvailable: false },
-];
-
-const PREFERRED_OPTIONS = [
-  { label: "Get Daily Matches", isAvailable: true },
-  { label: "Show Employers Your Interest", isAvailable: true },
-  { label: "Preferred Search Results Positioning", isAvailable: true },
-  { label: "manage your interest with AML", isAvailable: true },
-  { label: "priority matching to job opportunities", isAvailable: true },
+const PLAN_OPTIONS = [
+  { label: "Get Daily Matches", isFree: true, isPreferred: true },
+  { label: "Show Employers Your Interest", isFree: true, isPreferred: true },
+  {
+    label: "Preferred Search Results Positioning",
+    isFree: false,
+    isPreferred: true,
+  },
+  { label: "manage your interest with AML", isFree: false, isPreferred: true },
+  {
+    label: "priority matching to job opportunities",
+    isFree: false,
+    isPreferred: true,
+  },
 ];
 
 function PurchaseCenter() {
@@ -98,9 +98,9 @@ function PurchaseCenter() {
               </Box>
               <Divider className={styles.divider} />
               <Box className={styles.bottomContent}>
-                {FREE_OPTIONS.map((option) => (
+                {PLAN_OPTIONS.map((option) => (
                   <Box className={styles.listItem} key={option.label}>
-                    {option.isAvailable ? (
+                    {option.isFree ? (
                       <CheckCircleOutlineRounded
                         className={`${styles.listIcon} ${styles.available}`}
                       />
@@ -175,9 +175,9 @@ function PurchaseCenter() {
               </Box>
               <Divider className={styles.divider} />
               <Box className={styles.bottomContent}>
-                {PREFERRED_OPTIONS.map((option) => (
+                {PLAN_OPTIONS.map((option) => (
                   <Box className={styles.listItem} key={option.label}>
-                    {option.isAvailable ? (
+                    {option.isPreferred ? (
                       <CheckCircleOutlineRounded
                         className={`${styles.listIcon} ${styles.available}`}
                       />
