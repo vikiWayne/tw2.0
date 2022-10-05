@@ -3,7 +3,7 @@ import { InitialStateType } from "./types";
 
 const initialState: InitialStateType = {
   user: null,
-  login: () => {},
+  login: async () => false,
   logout: () => {},
 };
 

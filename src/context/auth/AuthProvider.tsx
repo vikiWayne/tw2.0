@@ -5,16 +5,27 @@ import { User } from "./types";
 type AuthProviderProps = {
   children: ReactNode;
 };
+
+function sleep(time: number) {
+  return new Promise((resolve) => setTimeout(resolve, time));
+}
+
 function AuthProvider(props: AuthProviderProps) {
   const { children } = props;
 
   const [user, setUser] = useState<User>();
 
-  const login = useCallback((username: string, password: string) => {
-    if (username === "admin" && password === "admin@123") {
-      setUser(username);
-    }
-  }, []);
+  const login = useCallback(
+    async (username: string, password: string): Promise<boolean> => {
+      if (username === "admin" && password === "admin@123") {
+        await sleep(2000);
+        setUser(username);
+        return true;
+      }
+      return false;
+    },
+    []
+  );
 
   const logout = useCallback(() => {
     setUser(null);
@@ -22,6 +33,7 @@ function AuthProvider(props: AuthProviderProps) {
 
   useEffect(() => {
     login("admin", "admin@123");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const contextValues = useMemo(
