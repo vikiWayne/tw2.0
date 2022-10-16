@@ -9,8 +9,7 @@ import {
 import { useTheme as useMuiTheme } from "@mui/material/styles";
 import { AppBar, Sidebar } from "components";
 import SidebarContent from "components/sidebar/sidebarContent";
-import { useTheme } from "hooks";
-import { ReactNode, useEffect, useLayoutEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import styles from "./styles.module.scss";
 
 const PRO_PIC =
@@ -21,7 +20,7 @@ type LayoutProps = { children: ReactNode };
 
 function Layout(props: LayoutProps) {
   const { children } = props;
-  const { mode } = useTheme();
+
   const theme = useMuiTheme();
   const isLargerScreen = useMediaQuery(theme.breakpoints.up("sm"));
 
@@ -30,12 +29,6 @@ function Layout(props: LayoutProps) {
   const toggleDrawer = () => {
     setShowSidebar((prev) => !prev);
   };
-
-  // Add theme class to body before loading
-  useLayoutEffect(() => {
-    document.body.classList.add(`theme-${mode}`);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   useEffect(() => {
     if (isLargerScreen) {

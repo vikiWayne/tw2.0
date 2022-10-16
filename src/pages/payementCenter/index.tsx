@@ -1,4 +1,10 @@
-import { Box, Button, Divider, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Divider,
+  Typography,
+  useTheme as useMuiTheme,
+} from "@mui/material";
 import { Breadcrumb, PageWrapper, PaymentCard, Plan } from "components/ui";
 import styles from "./styles.module.scss";
 
@@ -21,6 +27,8 @@ const NO_OF_PAYMENTS = 10;
 const NO_OF_ACCESS_CODES = 5;
 
 function PaymentCenter() {
+  const { palette } = useMuiTheme();
+
   return (
     <PageWrapper>
       <Box className={styles.pageLayout}>
@@ -53,7 +61,9 @@ function PaymentCenter() {
               <Plan
                 width="20%"
                 active
-                activeColor={num % 2 ? "#19ce99" : "#f7245b"}
+                activeColor={
+                  num % 2 ? palette.success.main : palette.error.main
+                }
                 key={num}
               >
                 <Box className={styles.accessCode}>

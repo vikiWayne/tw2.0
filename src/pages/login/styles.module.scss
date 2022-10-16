@@ -1,0 +1,22 @@
+.container {
+    height: 100vh;
+    position: relative;
+    background-image: linear-gradient(108deg, var(--light) 57%, var(--color-primary) 70%);
+    display: flex;
+
+    .formContainer {
+        flex: 2;
+        padding: 6rem 0 0 6rem;
+    }
+    .imageContainer {
+        flex: 1;
+
+        position: relative;
+        .img {
+            position: absolute;
+            top: 15%;
+            left: -25%;
+            transform: rotate(-30deg);
+        }
+    }
+}

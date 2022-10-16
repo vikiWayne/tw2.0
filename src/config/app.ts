@@ -22,6 +22,9 @@ export const APP_ROUTES = {
   LOGIN: "/login",
   PURCHASE_CENTER: "/purchase-center",
   PAYMENT_CENTER: "/payment-center",
+  ACCOUNT_SETTINGS: "/account-settings",
+  DOCUMENT_CENTER: "/document-center",
+  LOGOUT: "/logout",
 };
 
 export const SIDEBAR_TOP_MENUS: SidebarList[] = [
@@ -35,9 +38,9 @@ export const SIDEBAR_TOP_MENUS: SidebarList[] = [
   {
     mainMenu: "My Account",
     subMenu: [
-      { icon: "", name: "Account Settings", link: "/account-settings" },
-      { icon: "", name: "Document Center", link: "/document-center" },
-      { icon: "", name: "Logout", link: "/logout" },
+      { icon: "", name: "Account Settings", link: APP_ROUTES.ACCOUNT_SETTINGS },
+      { icon: "", name: "Document Center", link: APP_ROUTES.DOCUMENT_CENTER },
+      { icon: "", name: "Logout", link: APP_ROUTES.LOGOUT },
     ],
   },
 ];

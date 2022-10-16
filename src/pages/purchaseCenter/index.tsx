@@ -7,6 +7,7 @@ import {
   Radio,
   RadioGroup,
   Typography,
+  useTheme,
 } from "@mui/material";
 import { Breadcrumb, PageWrapper, Plan } from "components/ui";
 import SwiperCarousal from "lib/swiper";
@@ -48,6 +49,7 @@ const PLAN_OPTIONS = [
 ];
 
 function PurchaseCenter() {
+  const { palette } = useTheme();
   return (
     <PageWrapper>
       <Box className={styles.pageLayout}>
@@ -56,7 +58,7 @@ function PurchaseCenter() {
           <Plan
             label="My Current Plan"
             active
-            activeColor="#00cccc"
+            activeColor={palette.primary.main}
             width="40%"
           >
             <Box className={styles.cardContent}>
@@ -153,7 +155,7 @@ function PurchaseCenter() {
                   label="Achieve Goals faster"
                   active
                   width="80%"
-                  activeColor="#19ce99"
+                  activeColor={palette.success.main}
                 >
                   <Box className={styles.sliderContent}>
                     <Box>

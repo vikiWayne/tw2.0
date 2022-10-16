@@ -1,9 +1,10 @@
 import { Box, Button, CircularProgress, Typography } from "@mui/material";
-import { PageWrapper } from "components/ui";
+import phoneImg from "assets/images/phone.png";
 import { APP_ROUTES } from "config/app";
 import { useAuth } from "hooks";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import styles from "./styles.module.scss";
 
 function Login() {
   const [loading, setLoading] = useState(false);
@@ -19,24 +20,26 @@ function Login() {
     }
   };
   return (
-    <PageWrapper>
-      <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          gap: "2rem",
-          flexDirection: "column",
-        }}
-      >
-        <Typography>
-          Click to login as temp user / wait 2 sec to Login
+    <Box className={styles.container}>
+      <Box className={styles.formContainer}>
+        <Typography fontWeight="500" fontSize="5.8rem">
+          <span className="colorPrimary">pepel account </span>for people who are
+          looking for...
         </Typography>
-        <Button variant="contained" color="primary" onClick={onLogin}>
+        <Typography sx={{ mb: 2, color: "primary.main" }}>
+          Click on login and wait for 2 seconds to login
+        </Typography>
+        <Button variant="contained" onClick={onLogin}>
           Login
+          {loading && (
+            <CircularProgress size={15} color="info" sx={{ mx: 1 }} />
+          )}
         </Button>
-        {loading && <CircularProgress size={22} color="primary" />}
       </Box>
-    </PageWrapper>
+      <Box className={styles.imageContainer}>
+        <img src={phoneImg} alt="phone" className={styles.img} />
+      </Box>
+    </Box>
   );
 }
 

@@ -59,6 +59,12 @@ export function ThemeProvider(props: ProviderType) {
       secondary: {
         main: colors.colorSecondaryLight,
       },
+      success: {
+        main: colors.successLight,
+      },
+      error: {
+        main: colors.errorLight,
+      },
     }),
     []
   );
@@ -73,6 +79,12 @@ export function ThemeProvider(props: ProviderType) {
       secondary: {
         main: colors.colorSecondaryDark,
       },
+      success: {
+        main: colors.successDark,
+      },
+      error: {
+        main: colors.errorDark,
+      },
     }),
     []
   );
@@ -82,6 +94,7 @@ export function ThemeProvider(props: ProviderType) {
       createTheme({
         palette: mode === "dark" ? darkThemePalette : lightThemePalette,
         typography: {
+          fontFamily: ["Poppins", "sans-serif"].join(","),
           fontSize: 14,
           htmlFontSize: 16,
         },
@@ -93,7 +106,7 @@ export function ThemeProvider(props: ProviderType) {
                 fontSize: "1rem",
               },
               containedPrimary: {
-                color: "#ffffff",
+                color: "white",
               },
             },
           },

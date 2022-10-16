@@ -48,4 +48,10 @@ $themes: (
 
     bgColorLight: getLightThemeColor($themes, bg-color);
     bgColorDark: getDarkThemeColor($themes, bg-color);
+
+    successLight: getLightThemeColor($themes, success);
+    successDark: getDarkThemeColor($themes, success);
+
+    errorLight: getLightThemeColor($themes, danger);
+    errorDark: getDarkThemeColor($themes, danger);
 }
